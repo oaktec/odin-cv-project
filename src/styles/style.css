@@ -34,8 +34,8 @@ body {
 
 .input-pane {
   background: #f1f5f9;
-  height: 80px;
   flex: 1;
+  height: 100%;
   color: #334155;
 }
 
