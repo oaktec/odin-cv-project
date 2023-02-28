@@ -38,6 +38,28 @@ body {
   height: 100%;
   color: #334155;
 }
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.category-list label {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 90%;
+}
+.category-list input {
+  padding: 2px 8px;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  width: 80%;
+  margin-left: auto;
+}
 
 .preview-pane {
   border: 1px solid #334155;
