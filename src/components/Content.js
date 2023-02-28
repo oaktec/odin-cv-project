@@ -12,7 +12,7 @@ function Content(props) {
 
   const [inputFields, setInputFields] = React.useState({
     name: "",
-    title: "",
+    jobTitle: "",
     educationFields: [],
     workFields: [],
   });
@@ -24,7 +24,7 @@ function Content(props) {
   return (
     <div className="content-container">
       {inputPane}
-      <PreviewPane />
+      <PreviewPane inputFields={inputFields} />
     </div>
   );
 }

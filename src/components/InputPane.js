@@ -7,7 +7,7 @@ function InputPane(props) {
   InputPane.propTypes = {
     inputFields: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
+      jobTitle: PropTypes.string.isRequired,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string.isRequired,
@@ -30,7 +30,7 @@ function InputPane(props) {
         category="Personal Details"
         fields={[
           { name: "name", label: "Name" },
-          { name: "title", label: "Title" },
+          { name: "jobTitle", label: "Job Title" },
         ]}
         inputFields={inputFields}
         setInputFields={setInputFields}
