@@ -9,9 +9,21 @@ function Content(props) {
     editMode: PropTypes.bool.isRequired,
   };
   const { editMode } = props;
+
+  const [inputFields, setInputFields] = React.useState({
+    name: "",
+    title: "",
+    educationFields: [],
+    workFields: [],
+  });
+
+  const inputPane = editMode ? (
+    <InputPane inputFields={inputFields} setInputFields={setInputFields} />
+  ) : null;
+
   return (
     <div className="content-container">
-      {editMode && <InputPane />}
+      {inputPane}
       <PreviewPane />
     </div>
   );
