@@ -1,12 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import InputPane from "./InputPane";
 import PreviewPane from "./PreviewPane";
 
-function Content() {
+function Content(props) {
+  Content.propTypes = {
+    editMode: PropTypes.bool.isRequired,
+  };
+  const { editMode } = props;
   return (
     <div className="content-container">
-      <InputPane />
+      {editMode && <InputPane />}
       <PreviewPane />
     </div>
   );
