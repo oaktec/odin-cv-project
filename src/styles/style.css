@@ -41,5 +41,8 @@ body {
 
 .preview-pane {
   border: 1px solid #334155;
+  margin: auto 0;
   flex: 1;
+  max-width: min(100%, calc(0.7 * (90vh - 100px)));
+  aspect-ratio: 0.7;
 }
