@@ -7,7 +7,9 @@ function App() {
   const [editMode, setEditMode] = React.useState(true);
 
   const toggleEditMode = () => {
-    console.log(editMode);
+    document
+      .querySelector(".preview-pane")
+      .classList.toggle("preview-pane--main");
     setEditMode(!editMode);
   };
 

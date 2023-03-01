@@ -73,6 +73,9 @@ body {
   font-size: 1cqw;
   overflow: hidden;
 }
+.preview-pane--main {
+  max-width: 90%;
+}
 .preview-pane * {
   overflow: hidden;
 }
