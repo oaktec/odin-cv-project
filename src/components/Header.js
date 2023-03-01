@@ -39,7 +39,7 @@ function Header(props) {
     website: "www.johndoe.com",
     location: "Bristol, UK",
     description:
-      "I am a software engineer looking to engineer software in a software engineering company.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Consectetur libero id faucibus nisl.",
     educationFields: [],
     workFields: [],
   };
