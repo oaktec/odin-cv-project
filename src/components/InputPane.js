@@ -15,7 +15,7 @@ function InputPane(props) {
       description: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
-          school: PropTypes.string.isRequired,
+          school: PropTypes.string,
         })
       ).isRequired,
       workFields: PropTypes.arrayOf(
@@ -31,8 +31,8 @@ function InputPane(props) {
 
   return (
     <div className="input-pane">
+      <h1>Personal Details</h1>
       <InputCategory
-        category="Personal Details"
         fields={[
           { name: "name", label: "Name" },
           { name: "jobTitle", label: "Job Title" },
@@ -45,17 +45,24 @@ function InputPane(props) {
         inputFields={inputFields}
         setInputFields={setInputFields}
       />
+      <h1>Education</h1>
       <InputCategory
-        category="Education"
-        fields={[{ name: "school", label: "School" }]}
+        fields={[
+          { name: "institution", label: "Institution" },
+          { name: "course", label: "Course" },
+          { name: "startYear", label: "Start Year" },
+          { name: "endYear", label: "End Year" },
+        ]}
         inputFields={inputFields}
         setInputFields={setInputFields}
+        variableCount="educationFields"
       />
+      <h1>Work Experience</h1>
       <InputCategory
-        category="Work Experience"
         fields={[{ name: "company", label: "Company" }]}
         inputFields={inputFields}
         setInputFields={setInputFields}
+        variableCount="workFields"
       />
     </div>
   );

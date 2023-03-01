@@ -57,6 +57,22 @@ function PreviewPane(props) {
         </div>
       </div>
       <div className="preview-pane__description">{inputFields.description}</div>
+      <div className="preview-pane__education">
+        <h2>Education</h2>
+        {inputFields.educationFields.map((educationField) => (
+          <div className="preview-pane__education-field">
+            <div className="preview-pane__education-field__school">
+              {educationField.institution}
+            </div>
+            <div className="preview-pane__education-field__course">
+              {educationField.course}
+            </div>
+            <div className="preview-pane__education-field__years">
+              {educationField.startYear}-{educationField.endYear}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

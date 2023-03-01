@@ -22,7 +22,6 @@ function InputCategory(props) {
         })
       ).isRequired,
     }).isRequired,
-    category: PropTypes.string.isRequired,
     fields: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
@@ -30,30 +29,75 @@ function InputCategory(props) {
       })
     ).isRequired,
     setInputFields: PropTypes.func.isRequired,
+    variableCount: PropTypes.string,
   };
-  const { category, fields, inputFields, setInputFields } = props;
-  return (
-    <div className="input-category">
-      <h1>{category}</h1>
-      <ul className="category-list">
-        {fields.map((field) => (
-          <label htmlFor={field.name} key={field.name}>
-            {field.label}
-            <input
-              type="text"
-              onChange={(e) => {
-                setInputFields({
-                  ...inputFields,
-                  [field.name]: e.target.value,
-                });
-              }}
-              value={inputFields[field.name]}
-            />
-          </label>
+  const { fields, inputFields, setInputFields, variableCount } = props;
+  let element;
+  if (variableCount) {
+    element = (
+      <div className="variable-input-categories">
+        {inputFields[variableCount].map((_, index) => (
+          <div className="input-category">
+            <ul className="category-list">
+              {fields.map((field) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <label htmlFor={field.name} key={`${index}${field.name}`}>
+                  {field.label}
+                  <input
+                    type="text"
+                    onChange={(e) => {
+                      const arr = inputFields[variableCount];
+                      inputFields[variableCount][index][field.name] =
+                        e.target.value;
+                      setInputFields({
+                        ...inputFields,
+                        [variableCount]: arr,
+                      });
+                    }}
+                    value={inputFields[field.name]}
+                  />
+                </label>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
-    </div>
-  );
+        <button
+          type="button"
+          onClick={() => {
+            setInputFields({
+              ...inputFields,
+              [variableCount]: inputFields[variableCount].concat([{}]),
+            });
+          }}
+        >
+          Add
+        </button>
+      </div>
+    );
+  } else {
+    element = (
+      <div className="input-category">
+        <ul className="category-list">
+          {fields.map((field) => (
+            <label htmlFor={field.name} key={field.name}>
+              {field.label}
+              <input
+                type="text"
+                onChange={(e) => {
+                  setInputFields({
+                    ...inputFields,
+                    [field.name]: e.target.value,
+                  });
+                }}
+                value={inputFields[field.name]}
+              />
+            </label>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  return element;
 }
 
 export default InputCategory;
