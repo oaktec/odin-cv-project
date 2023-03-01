@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 function PreviewPane(props) {
   PreviewPane.propTypes = {
     inputFields: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      jobTitle: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      jobTitle: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
-          school: PropTypes.string.isRequired,
+          school: PropTypes.string,
         })
       ).isRequired,
       workFields: PropTypes.arrayOf(
@@ -20,12 +20,11 @@ function PreviewPane(props) {
   };
 
   const { inputFields } = props;
-
   return (
     <div className="preview-pane">
       <div className="preview-pane__header">
-        <h1 className="preview-pane__name">{inputFields.name}</h1>
-        <h2 className="preview-pane__title">{inputFields.jobTitle}</h2>
+        <div className="preview-pane__name">{inputFields.name}</div>
+        <div className="preview-pane__job-title">{inputFields.jobTitle}</div>
       </div>
     </div>
   );
