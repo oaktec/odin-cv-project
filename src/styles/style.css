@@ -71,6 +71,10 @@ body {
   max-width: var(--preview-max-width);
   aspect-ratio: 0.7;
   font-size: 1cqw;
+  overflow: hidden;
+}
+.preview-pane * {
+  overflow: hidden;
 }
 .preview-pane__header {
   background: #334155;
@@ -80,6 +84,9 @@ body {
   grid-template-rows: 60% 40%;
   height: 15%;
   width: 100%;
+}
+.preview-pane__header * {
+  white-space: nowrap;
 }
 .preview-pane__name {
   text-transform: uppercase;
