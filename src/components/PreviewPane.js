@@ -1,5 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faLink,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 function PreviewPane(props) {
   PreviewPane.propTypes = {
@@ -30,10 +37,22 @@ function PreviewPane(props) {
         <div className="preview-pane__name">{inputFields.name}</div>
         <div className="preview-pane__job-title">{inputFields.jobTitle}</div>
         <div className="preview-pane__side-group">
-          <div className="preview-pane__email">{inputFields.email}</div>
-          <div className="preview-pane__phone">{inputFields.phone}</div>
-          <div className="preview-pane__website">{inputFields.website}</div>
-          <div className="preview-pane__location">{inputFields.location}</div>
+          <div className="preview-pane__email">
+            {`${inputFields.email} `}
+            <FontAwesomeIcon icon={faEnvelope} />
+          </div>
+          <div className="preview-pane__phone">
+            {`${inputFields.phone} `}
+            <FontAwesomeIcon icon={faPhone} />
+          </div>
+          <div className="preview-pane__website">
+            {`${inputFields.website} `}
+            <FontAwesomeIcon icon={faLink} />
+          </div>
+          <div className="preview-pane__location">
+            {`${inputFields.location} `}
+            <FontAwesomeIcon icon={faLocationDot} />
+          </div>
         </div>
       </div>
     </div>
