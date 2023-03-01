@@ -53,6 +53,12 @@ function Header(props) {
         startYear: "2019",
         endYear: "2022",
       },
+      {
+        institution: "University of the West of England",
+        course: "Foundation Degree in Computing",
+        startYear: "2017",
+        endYear: "2019",
+      },
     ],
     workFields: [],
   };
