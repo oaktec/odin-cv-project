@@ -29,6 +29,7 @@ function App() {
       <Header
         toggleEditMode={toggleEditMode}
         editMode={editMode}
+        inputFields={inputFields}
         setInputFields={setInputFields}
       />
       <Content
