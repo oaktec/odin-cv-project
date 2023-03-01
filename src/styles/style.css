@@ -119,12 +119,12 @@ body {
   font-size: 1.5cqw;
 }
 .preview-pane__education-field {
-  /* display: flex; */
-  /* align-items: center; */
+  align-items: center;
   display: grid;
-  grid-template-columns: minmax(auto, 2fr) minmax(auto, 1fr) auto;
+  grid-template-columns: 39cqw 39cqw 16cqw;
   gap: 4cqw;
   font-size: 2cqw;
+  padding: 1cqw 0;
 }
 .preview-pane__education > h2 {
   font-size: 5cqw;
