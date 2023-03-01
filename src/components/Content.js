@@ -13,6 +13,10 @@ function Content(props) {
   const [inputFields, setInputFields] = React.useState({
     name: "",
     jobTitle: "",
+    email: "",
+    phone: "",
+    website: "",
+    location: "",
     educationFields: [],
     workFields: [],
   });

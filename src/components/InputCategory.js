@@ -6,6 +6,10 @@ function InputCategory(props) {
     inputFields: PropTypes.shape({
       name: PropTypes.string,
       title: PropTypes.string,
+      email: PropTypes.string,
+      phone: PropTypes.string,
+      website: PropTypes.string,
+      location: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string,

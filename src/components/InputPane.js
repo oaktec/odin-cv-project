@@ -6,8 +6,12 @@ import InputCategory from "./InputCategory";
 function InputPane(props) {
   InputPane.propTypes = {
     inputFields: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      jobTitle: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      jobTitle: PropTypes.string,
+      email: PropTypes.string,
+      phone: PropTypes.string,
+      website: PropTypes.string,
+      location: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string.isRequired,
@@ -31,6 +35,10 @@ function InputPane(props) {
         fields={[
           { name: "name", label: "Name" },
           { name: "jobTitle", label: "Job Title" },
+          { name: "email", label: "Email" },
+          { name: "phone", label: "Phone" },
+          { name: "website", label: "Website" },
+          { name: "location", label: "Location" },
         ]}
         inputFields={inputFields}
         setInputFields={setInputFields}
