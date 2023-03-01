@@ -10,6 +10,7 @@ function InputCategory(props) {
       phone: PropTypes.string,
       website: PropTypes.string,
       location: PropTypes.string,
+      description: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string,

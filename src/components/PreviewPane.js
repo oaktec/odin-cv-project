@@ -17,6 +17,7 @@ function PreviewPane(props) {
       phone: PropTypes.string,
       website: PropTypes.string,
       location: PropTypes.string,
+      description: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string,
@@ -55,6 +56,7 @@ function PreviewPane(props) {
           </div>
         </div>
       </div>
+      <div className="preview-pane__description">{inputFields.description}</div>
     </div>
   );
 }

@@ -12,6 +12,7 @@ function InputPane(props) {
       phone: PropTypes.string,
       website: PropTypes.string,
       location: PropTypes.string,
+      description: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
           school: PropTypes.string.isRequired,
@@ -39,6 +40,7 @@ function InputPane(props) {
           { name: "phone", label: "Phone" },
           { name: "website", label: "Website" },
           { name: "location", label: "Location" },
+          { name: "description", label: "Description" },
         ]}
         inputFields={inputFields}
         setInputFields={setInputFields}

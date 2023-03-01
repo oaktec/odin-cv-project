@@ -17,6 +17,7 @@ function Content(props) {
     phone: "",
     website: "",
     location: "",
+    description: "",
     educationFields: [],
     workFields: [],
   });
