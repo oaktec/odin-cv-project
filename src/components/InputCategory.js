@@ -4,16 +4,16 @@ import PropTypes from "prop-types";
 function InputCategory(props) {
   InputCategory.propTypes = {
     inputFields: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      title: PropTypes.string,
       educationFields: PropTypes.arrayOf(
         PropTypes.shape({
-          school: PropTypes.string.isRequired,
+          school: PropTypes.string,
         })
       ).isRequired,
       workFields: PropTypes.arrayOf(
         PropTypes.shape({
-          company: PropTypes.string.isRequired,
+          company: PropTypes.string,
         })
       ).isRequired,
     }).isRequired,
