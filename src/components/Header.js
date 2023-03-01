@@ -40,7 +40,20 @@ function Header(props) {
     location: "Bristol, UK",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Consectetur libero id faucibus nisl.",
-    educationFields: [],
+    educationFields: [
+      {
+        institution: "The Odin Project",
+        course: "Full Stack JavaScript",
+        startYear: "2023",
+        endYear: "now",
+      },
+      {
+        institution: "University of the West of England",
+        course: "BSc Computer Science",
+        startYear: "2019",
+        endYear: "2022",
+      },
+    ],
     workFields: [],
   };
 
