@@ -5,6 +5,17 @@ import Content from "./components/Content";
 
 function App() {
   const [editMode, setEditMode] = React.useState(true);
+  const [inputFields, setInputFields] = React.useState({
+    name: "",
+    jobTitle: "",
+    email: "",
+    phone: "",
+    website: "",
+    location: "",
+    description: "",
+    educationFields: [],
+    workFields: [],
+  });
 
   const toggleEditMode = () => {
     document
@@ -15,8 +26,16 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggleEditMode={toggleEditMode} editMode={editMode} />
-      <Content editMode={editMode} />
+      <Header
+        toggleEditMode={toggleEditMode}
+        editMode={editMode}
+        setInputFields={setInputFields}
+      />
+      <Content
+        editMode={editMode}
+        inputFields={inputFields}
+        setInputFields={setInputFields}
+      />
     </div>
   );
 }

@@ -7,20 +7,29 @@ import PreviewPane from "./PreviewPane";
 function Content(props) {
   Content.propTypes = {
     editMode: PropTypes.bool.isRequired,
+    inputFields: PropTypes.shape({
+      name: PropTypes.string,
+      jobTitle: PropTypes.string,
+      email: PropTypes.string,
+      phone: PropTypes.string,
+      website: PropTypes.string,
+      location: PropTypes.string,
+      description: PropTypes.string,
+      educationFields: PropTypes.arrayOf(
+        PropTypes.shape({
+          school: PropTypes.string,
+        })
+      ).isRequired,
+      workFields: PropTypes.arrayOf(
+        PropTypes.shape({
+          company: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    }).isRequired,
+    setInputFields: PropTypes.func.isRequired,
   };
   const { editMode } = props;
-
-  const [inputFields, setInputFields] = React.useState({
-    name: "",
-    jobTitle: "",
-    email: "",
-    phone: "",
-    website: "",
-    location: "",
-    description: "",
-    educationFields: [],
-    workFields: [],
-  });
+  const { inputFields, setInputFields } = props;
 
   const inputPane = editMode ? (
     <InputPane inputFields={inputFields} setInputFields={setInputFields} />
