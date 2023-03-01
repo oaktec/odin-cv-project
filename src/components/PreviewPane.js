@@ -68,7 +68,7 @@ function PreviewPane(props) {
               {educationField.course}
             </div>
             <div className="preview-pane__education-field__years">
-              {educationField.startYear}-{educationField.endYear}
+              {educationField.startYear} - {educationField.endYear}
             </div>
           </div>
         ))}
