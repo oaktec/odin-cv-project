@@ -112,3 +112,9 @@ body {
   height: 100%;
   font-size: 2cqw;
 }
+.preview-pane__description {
+  background: #f1f5f9;
+  color: #636363;
+  padding: 2cqw 10cqw 2cqw 5cqw;
+  font-size: 1.5cqw;
+}
