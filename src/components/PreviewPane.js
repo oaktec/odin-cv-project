@@ -80,13 +80,13 @@ function PreviewPane(props) {
             <div className="preview-pane__work-field__company">
               {workField.company}
             </div>
-            <div className="preview-pane__education-field__position">
+            <div className="preview-pane__work-field__position">
               {workField.position}
             </div>
-            <div className="preview-pane__education-field__years">
+            <div className="preview-pane__work-field__years">
               {workField.startYear} - {workField.endYear}
             </div>
-            <div className="preview-pane__education-field__description">
+            <div className="preview-pane__work-field__description">
               {workField.description}
             </div>
           </div>
