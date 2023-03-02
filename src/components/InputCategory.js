@@ -56,7 +56,7 @@ function InputCategory(props) {
                         [variableCount]: arr,
                       });
                     }}
-                    value={inputFields[variableCount][field.name]}
+                    value={inputFields[variableCount][index][field.name]}
                   />
                 </label>
               ))}
