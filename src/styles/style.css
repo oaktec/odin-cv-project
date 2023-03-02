@@ -105,6 +105,7 @@ body {
 .input-category {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: stretch;
   gap: 8px;
   padding: 8px;
@@ -120,6 +121,20 @@ body {
 }
 .delete-section:hover {
   background-color: #fca5a5;
+}
+.add-section {
+  color: #1b4332;
+  background-color: #e2f3ee;
+  font-size: 120%;
+  align-self: center;
+  padding: 4px 8px;
+  margin-left: 16px;
+  gap: 8px;
+  cursor: pointer;
+  border: 1px solid #1b4332;
+}
+.add-section:hover {
+  background-color: #a5e8d8;
 }
 .preview-pane__side-group {
   grid-area: 1 / 3 / 3 / 4;

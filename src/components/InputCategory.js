@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faAdd } from "@fortawesome/free-solid-svg-icons";
 
 function InputCategory(props) {
   InputCategory.propTypes = {
@@ -86,8 +86,10 @@ function InputCategory(props) {
               [variableCount]: inputFields[variableCount].concat([{}]),
             });
           }}
+          className="add-section"
         >
-          Add
+          <FontAwesomeIcon className="add-button" icon={faAdd} />
+          <span> Add</span>
         </button>
       </div>
     );
