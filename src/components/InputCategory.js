@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function InputCategory(props) {
   InputCategory.propTypes = {
@@ -54,11 +56,22 @@ function InputCategory(props) {
                         [variableCount]: arr,
                       });
                     }}
-                    value={inputFields[field.name]}
+                    value={inputFields[variableCount][field.name]}
                   />
                 </label>
               ))}
             </ul>
+            <FontAwesomeIcon
+              icon={faTrash}
+              onClick={() => {
+                const arr = inputFields[variableCount];
+                arr.splice(index, 1);
+                setInputFields({
+                  ...inputFields,
+                  [variableCount]: arr,
+                });
+              }}
+            />
           </div>
         ))}
         <button
