@@ -65,7 +65,7 @@ body {
   --preview-max-width: min(100%, calc(0.7 * (90vh - 100px)));
   --preview-unit: calc(1cqw);
   position: sticky;
-  top: 0;
+  top: 10px;
   border: 1px solid #334155;
   container: preview / size;
   margin-bottom: auto;
