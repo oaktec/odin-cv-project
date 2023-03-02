@@ -64,9 +64,11 @@ body {
 .preview-pane {
   --preview-max-width: min(100%, calc(0.7 * (90vh - 100px)));
   --preview-unit: calc(1cqw);
+  position: sticky;
+  top: 0;
   border: 1px solid #334155;
   container: preview / size;
-  margin: auto 0;
+  margin-bottom: auto;
   flex: 1;
   max-width: var(--preview-max-width);
   aspect-ratio: 0.7;
