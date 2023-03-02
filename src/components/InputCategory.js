@@ -61,8 +61,8 @@ function InputCategory(props) {
                 </label>
               ))}
             </ul>
-            <FontAwesomeIcon
-              icon={faTrash}
+            <button
+              type="button"
               onClick={() => {
                 const arr = inputFields[variableCount];
                 arr.splice(index, 1);
@@ -71,7 +71,11 @@ function InputCategory(props) {
                   [variableCount]: arr,
                 });
               }}
-            />
+              className="delete-section"
+            >
+              <FontAwesomeIcon className="delete-button" icon={faTrash} />
+              <span> Delete</span>
+            </button>
           </div>
         ))}
         <button
