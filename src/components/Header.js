@@ -28,8 +28,7 @@ function Header(props) {
   };
 
   const { editMode, toggleEditMode } = props;
-  // eslint-disable-next-line no-unused-vars
-  const { inputFields, setInputFields } = props;
+  const { setInputFields } = props;
 
   const exampleInfo = {
     name: "John Doe",
@@ -60,7 +59,22 @@ function Header(props) {
         endYear: "2019",
       },
     ],
-    workFields: [],
+    workFields: [
+      {
+        company: "The Odin Project",
+        position: "Full Stack JavaScript Tutor",
+        startYear: "2023",
+        endYear: "2023",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        company: "Software Company",
+        position: "Software Engineer",
+        startYear: "2024",
+        endYear: "2029",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   };
 
   return (

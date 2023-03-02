@@ -73,6 +73,25 @@ function PreviewPane(props) {
           </div>
         ))}
       </div>
+      <div className="preview-pane__work">
+        <h2>Education</h2>
+        {inputFields.workFields.map((workField) => (
+          <div className="preview-pane__work-field">
+            <div className="preview-pane__work-field__company">
+              {workField.company}
+            </div>
+            <div className="preview-pane__education-field__position">
+              {workField.position}
+            </div>
+            <div className="preview-pane__education-field__years">
+              {workField.startYear} - {workField.endYear}
+            </div>
+            <div className="preview-pane__education-field__description">
+              {workField.description}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

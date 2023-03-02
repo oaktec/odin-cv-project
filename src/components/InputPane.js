@@ -59,7 +59,13 @@ function InputPane(props) {
       />
       <h1>Work Experience</h1>
       <InputCategory
-        fields={[{ name: "company", label: "Company" }]}
+        fields={[
+          { name: "company", label: "Company" },
+          { name: "position", label: "Position" },
+          { name: "startYear", label: "Start Year" },
+          { name: "endYear", label: "End Year" },
+          { name: "description", label: "Description" },
+        ]}
         inputFields={inputFields}
         setInputFields={setInputFields}
         variableCount="workFields"
