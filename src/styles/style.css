@@ -179,3 +179,34 @@ body {
 .preview-pane__education > div:nth-child(2n) {
   background: #f1f5f9;
 }
+.preview-pane__work-field {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 39cqw 39cqw 16cqw;
+  gap: 4cqw;
+  font-size: 2cqw;
+  padding: 1cqw 0;
+}
+.preview-pane__work > h2 {
+  font-size: 5cqw;
+  padding: 1cqw 5cqw;
+  margin: 2cqw;
+  text-transform: uppercase;
+}
+.preview-pane__work-field__company {
+  font-weight: bold;
+  font-size: 2.5cqw;
+  padding-left: 5cqw;
+}
+.preview-pane__work-field__years {
+  margin-left: auto;
+  padding-right: 5cqw;
+  font-style: italic;
+}
+.preview-pane__work-field__description {
+  grid-column: span 3;
+  padding: 0 5cqw 1cqw;
+}
+.preview-pane__work > div:nth-child(2n) {
+  background: #f1f5f9;
+}
