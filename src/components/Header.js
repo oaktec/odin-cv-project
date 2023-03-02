@@ -65,14 +65,16 @@ function Header(props) {
         position: "Full Stack JavaScript Tutor",
         startYear: "2023",
         endYear: "2023",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu cursus vitae congue. Porttitor eget dolor morbi non.",
       },
       {
         company: "Software Company",
         position: "Software Engineer",
         startYear: "2024",
         endYear: "2029",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt.",
       },
     ],
   };
