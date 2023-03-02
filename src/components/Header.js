@@ -91,7 +91,7 @@ function Header(props) {
         />
       </label>
       <button type="button" onClick={() => setInputFields(exampleInfo)}>
-        Populate with example info.
+        Populate fields with example info
       </button>
       <h1>CV Project</h1>
     </div>
